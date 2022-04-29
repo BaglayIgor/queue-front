@@ -40,7 +40,6 @@ const LoginForm = () => {
     var loginForm = {
       username: student.username
     };
-    console.log('test ' + JSON.stringify(loginForm));
 
     stompClient.send("/app/login", {}, JSON.stringify(loginForm));
   } 
@@ -81,7 +80,6 @@ const LoginForm = () => {
     };
   
     stompClient.send("/app/take", {}, JSON.stringify(studentForQueue));
-    console.log('test ' + JSON.stringify(studentForQueue));
   }
 
   const leaveQueue = () => {
@@ -90,7 +88,6 @@ const LoginForm = () => {
     };
   
     stompClient.send("/app/leave", {}, JSON.stringify(studentForQueue));
-    console.log('test ' + JSON.stringify(studentForQueue));
   }
 
   const logout = () => {
@@ -99,7 +96,6 @@ const LoginForm = () => {
     };
   
     stompClient.send("/app/logout", {}, JSON.stringify(studentForLeaveQueue));
-    console.log('test ' + JSON.stringify(studentForLeaveQueue));
   }
 
   const connect =()=>{
